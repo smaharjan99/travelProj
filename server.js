@@ -19,7 +19,7 @@ app.use(express.static(__dirname + '/'));
 
 
 app.get('/', function (req, res) {
-    res.redirect('dist/view/index.html');
+    res.redirect('/views/index.html');
 })
 
 

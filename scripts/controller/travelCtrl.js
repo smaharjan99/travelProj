@@ -3,10 +3,22 @@
 angular.module("travelApp").controller("travelCtrl", ["$scope", "travelService", function ($scope, $travelService) {
 
     $scope.destinationsList = [
-        'The Shire',
-        'Rivendell',
-        'Isengard',
-        'Mordor'
+            {
+                name: 'The Shire',
+                src: '#!/destinations'
+            },
+            {
+                name: 'Rivendell',
+                src: '#!/destinations'
+            },
+            {
+                name: 'Isengard',
+                src: '#!/destinations'
+        },
+            {
+                name: 'Mordor',
+                src: '#!/destinations'
+            }
     ],
         $scope.status = {
             isopen: false
@@ -22,5 +34,24 @@ angular.module("travelApp").controller("travelCtrl", ["$scope", "travelService",
     };
 
     $scope.appenToEl = angular.element(document.querySelector('#dropdown-long-content'));
+
+    $scope.myInterval = 5000;
+    $scope.noWrapSlides = false;
+    $scope.active = 0;
+    var slides = $scope.slides = [];
+
+
+    $scope.slides = [
+        {
+            image: '/images/map.jpg'
+            text: 'asd',
+            id: 0
+    },
+        {
+            image: '/images/about1.jpg'
+            text: 'asd',
+            id: 1
+  }]
+
 
 }]);

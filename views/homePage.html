@@ -1,0 +1,43 @@
+<!--
+<div class="container">
+    <img src="/images/map.jpg" class="img-responsive" alt="Responsive image">
+</div>
+<div class="banner">
+    <div class="slider landing-slider">
+    </div>
+</div>
+-->
+<!--<div>
+    <carousel interval="myInterval">
+        <slide ng-repeat="slide in slides" active="slide.active">
+            <img ng-src="{{slide.image}}">
+
+        </slide>
+    </carousel>
+</div>-->
+
+<div style="height: 305px">
+    <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+        <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+            <img ng-src="{{slide.image}}" style="margin:auto;">
+            <div class="carousel-caption">
+                <h4>Slide {{slide.id}}</h4>
+                <p>{{slide.text}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="banner">
+    <div class="slider landing-slider">
+        <div class="flex-viewport" style="overflow: hidden; position:relative;">
+            <ul class="slides">
+                <li class="clone" aria hidden="true" style="width:656px; float:left; display:block;">
+                    <div class="img-h" style="background-image: url(" /images/map.jpg ");">
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>-->

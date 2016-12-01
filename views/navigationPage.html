@@ -1,66 +1,51 @@
-<!--<span uib-dropdown on-toggle="toggled(open)">
-      <a href id="simple-dropdown" uib-dropdown-toggle>
-        Destinations
-      </a>
-      <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
-        <li ng-repeat="choice in destinationsList">
-          <a href>{{choice}}</a>
-        </li>
-      </ul>
-    </span>-->
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<nav class="navbar navbar-default navbar-custom navbar-nav navbar-fixed-top">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarResp" aria-controls="navbarResp" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <!--<div class="container-fluid">
+        <div class="navbar-header navbar-default navbar-nav" style="height:75px;" navbar-fixed-top>
+-->
+    <a class="navbar-brand" href="#!/" style="font-family:Roboto">TOLKIEN TRAVELS<img src="/images/JRRT_logo.svg.png" class="img-responsive" alt="Responsive image" style="width: 25px; height: 32px;"></a>
+    <!--</div>-->
+    <div class="collapse navbar-collapse" id="navbarResp">
+
+        <ul class="nav navbar-nav">
+
+            <li><a href="#!/">Home</a></li>
+            <li class="dropdown">
+                <a href="#!/destinations" class="dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenu1" aria-haspopup="true" aria-expanded="false">Destinations<span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li ng-repeat="choice in destinationsList">
+                        <a href="{{choice.src}}">{{choice.name}}</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#!/reservations" class="dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenu1" aria-haspopup="true" aria-expanded="false">Reservations<span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#!/reservations">Flights</a></li>
+                    <li><a href="#!/reservations">Hotels</a></li>
+
+                </ul>
+            </li>
+            <li><a href="#!/about">About Us</a></li>
+            <li><a href="#!/contact">Contact</a></li>
 
 
-
-
-
-
-
-
-
-
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">TOLKIEN TRAVELS</a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenu1" aria-haspopup="true" aria-expanded="false">Reservations <span class="caret"></span></a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li ng-repeat="choice in destinationsList">
-                            <a href>{{choice}}</a>
-                        </li>
-                    </ul>
-                </li>
-                <span uib-dropdown on-toggle="toggled(open)">
-      <a href id="simple-dropdown" uib-dropdown-toggle>
-        Destinations
-      </a>
-      <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
-        <li ng-repeat="choice in destinationsList">
-          <a href>{{choice}}</a>
-        </li>
-      </ul>
-    </span>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <form class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-        </div>
-
-
+        </ul>
+        <form class="navbar-form navbar-left">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
     </div>
+
+
+
 </nav>

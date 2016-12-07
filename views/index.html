@@ -3,7 +3,7 @@
 
 <head>
     <title>Tolkien Travels</title>
-    <!--<link rel="stylesheet" type="text/css" href="/css/style.css">-->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.css">
     <!--<link rel="stylesheet" type="text/css" href="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css">-->
 </head>
@@ -11,17 +11,21 @@
 <body ng-app="travelApp">
     <navigation-page></navigation-page>
     <div ng-view></div>
-<!--<home-page></home-page>-->
+    <!--<home-page></home-page>-->
 
 </body>
 
 <script type="text/javascript" src="/node_modules/angular/angular.js"></script>
 <script type="text/javascript" src="/node_modules/angular-route/angular-route.js"></script>
-<script type="text/javascript" src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+<script type="text/javascript" src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
 
 <script type="text/javascript" src="/scripts/travel.js"></script>
 <script type="text/javascript" src="/scripts/controller/travelCtrl.js"></script>
 <script type="text/javascript" src="/scripts/directives/navigationPage.js"></script>
+<script type="text/javascript" src="/scripts/directives/bookingsPage.js"></script>
+<script type="text/javascript" src="/scripts/directives/hotels.js"></script>
+<script type="text/javascript" src="/scripts/directives/contactUs.js"></script>
+<script type="text/javascript" src="/scripts/directives/flightStatus.js"></script>
 <!--<script type="text/javascript" src="/scripts/directives/aboutPage.js">
 </script>
 <script type="text/javascript" src="/scripts/directives/contactPage.js"></script>

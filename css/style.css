@@ -104,3 +104,116 @@ img {
     top: 11px;
     left: -6px;
 }
+
+#imageContainer {
+    background-image: url('/images/flight.jpg');
+    height: 680px;
+    background-position: center;
+    margin: auto;
+}
+
+#hotelContainer {
+    background-image: url('/images/vacation.jpg');
+    background-position: center;
+    height: 700px;
+}
+
+#contactContainer {
+    background-image: url(/images/contact1.jpg);
+    background-position: center;
+    height: 700px;
+}
+
+.flightForm {
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 70px
+}
+
+.hotelForm {
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 70px
+}
+
+.contactClass {
+    float: right;
+    text-align: left;
+    margin-right: 200px;
+    margin-top: 70px;
+}
+
+#hotelInput > input[type="text"] {
+    display: block;
+    width: 490px;
+    height: 30px;
+    border-style: hidden;
+}
+
+#hotelCheck > input[type="date"] {
+    width: 160px;
+    height: 30px;
+    border-style: hidden;
+}
+
+#hotelGuest > select {
+    width: 50px;
+    height: 30px;
+    border-style: hidden;
+}
+
+#comment {
+    display: block;
+    width: 490px;
+    height: 120px;
+    border-style: hidden;
+}
+
+input[type="text"] {
+    display: block;
+    width: 180px;
+    height: 30px;
+    border-style: hidden;
+}
+
+input[type="date"] {
+    width: 180px;
+    height: 30px;
+    border-style: hidden;
+}
+
+select {
+    width: 180px;
+    height: 30px;
+    border-style: hidden;
+}
+
+label {
+    color: whitesmoke;
+}
+
+.typeahead-demo .custom-popup-wrapper {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    background-color: #f9f9f9;
+}
+
+.typeahead-demo .custom-popup-wrapper > .message {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    color: #868686;
+}
+
+.typeahead-demo .custom-popup-wrapper > .dropdown-menu {
+    position: static;
+    float: none;
+    display: block;
+    min-width: 160px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}

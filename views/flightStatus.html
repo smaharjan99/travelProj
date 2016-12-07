@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-md-2">
+        <label ng-click='flightStatus.toggleOrder("depart")'>Departure</label>
+    </div>
+    <div class="col-md-2">
+        <label ng-click='flightStatus.toggleOrder("destination")'>Destination</label>
+    </div>
+    <div class="col-md-2">
+        <label ng-click='flightStatus.toggleOrder("departdate")'>Deparing Date</label>
+    </div>
+    <div class="col-md-2">
+        <label ng-click='flightStatus.toggleOrder("arrivaldate")'>Arrival Data</label>
+    </div>
+    <div class="col-md-2">
+        <label ng-click='flightStatus.toggleOrder("passanger")'>Passangers</label>
+    </div>
+    <div class="col-md-2">
+        <label ng-click='flightStatus.toggleOrder("class")'>Advanced</label>
+    </div>
+</div>
+<div class="row" ng-repeat="list in flightArray">
+    <div class="col-md-2">
+        {{list.depart}}
+    </div>
+    <div class="col-md-2">
+        {{list.destinatio}}
+    </div>
+    <div class="col-md-2">
+        {{list.departdate}}
+    </div>
+    <div class="col-md-2">
+        {{list.arrivaldate}}
+    </div>
+    <div class="col-md-2">
+        {{list.passanger}}
+    </div>
+    <div class="col-md-2">
+        {{list.class}}
+    </div>
+</div>

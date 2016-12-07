@@ -14,13 +14,6 @@
     background-color: black;
 }
 
-.navbar-header .navbar-nav > li > a:hover,
-.navbar-header .navbar-nav > li > a:focus {
-    color: black;
-    font-family: fantasy;
-    /*Sets the text hover color on navbar*/
-}
-
 .navbar-header .navbar-nav > .active > a,
 .navbar-header .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
@@ -30,6 +23,7 @@
 }
 
 .navbar-default {
+    position: relative;
     background-color: white;
     border-color: black;
     font-family: "Roboto";
@@ -40,13 +34,14 @@
 
 .nav > li > a:hover,
 .nav > li > a:focus {
-    text-decoration: none;
+    position: relative;
+    text-decoration: underline;
     background-color: rebeccapurple;
     /*Change rollover cell color here*/
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: black;
+    color: inherit;
     /*Change active text color here*/
 }
 
@@ -82,7 +77,7 @@ img {
 }
 
 .dropdown:hover .dropdown-menu {
-    display: block;
+    display: inline-block;
 }
 
 .nav-tabs .dropdown-menu,

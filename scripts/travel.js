@@ -1,6 +1,6 @@
 'use strict';
 
-var appName = angular.module("travelApp", ['ngRoute']);
+var appName = angular.module("travelApp", ['ngRoute', 'ui.bootstrap']);
 appName.config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
     $routeProvider.when('/', {
             controller: "travelCtrl",
@@ -15,7 +15,7 @@ appName.config(['$locationProvider', '$routeProvider', function ($locationProvid
             templateUrl: "/views/reservationsPage.html"
         })
         .when("/destinations", {
-            //controller: "travelCtrl",
+            controller: "travelCtrl",
             templateUrl: "/views/destinationsPage.html"
         })
         .when("/contact", {

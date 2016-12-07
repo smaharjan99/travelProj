@@ -12,7 +12,7 @@ angular.module("travelApp").controller("travelCtrl", ["$scope", "travelService",
                 src: '#!/destinations'
             },
             {
-                name: 'Isengard',
+                name: 'Minas Tirith',
                 src: '#!/destinations'
         },
             {
@@ -39,19 +39,56 @@ angular.module("travelApp").controller("travelCtrl", ["$scope", "travelService",
     $scope.noWrapSlides = false;
     $scope.active = 0;
     var slides = $scope.slides = [];
+    var slides1 = $scope.slides2 = [];
+    var slides2 = $scope.slides2 = [];
+    var slides3 = $scope.slides2 = [];
+
 
 
     $scope.slides = [
         {
-            image: '/images/map.jpg'
+            image: '/images/map.jpg',
             text: 'asd',
             id: 0
     },
         {
-            image: '/images/about1.jpg'
+            image: '/images/about1.jpg',
             text: 'asd',
             id: 1
   }]
 
+    $scope.slides2 = [
+        {
+            image: '/images/shire3.jpg',
+            text: 'THE SHIRE',
+            id: 0
+    },
+        {
+            image: '/images/rivendell1.jpg',
+            text: 'RIVENDELL',
+            id: 1
+  },
+        {
+            image: '/images/minas1.jpg',
+            text: 'MINAS TIRITH',
+            id: 2
+    },
+        {
+            image: '/images/mordor1.jpg',
+            text: 'MORDOR',
+            id: 3
+  }
+    ]
 
+    $scope.slides1 = [
+        {
+            image: '/images/travel1.jpg',
+            text: 'asd',
+            id: 0
+    },
+        {
+            image: '/images/error1.jpg',
+            text: 'asd',
+            id: 1
+  }]
 }]);

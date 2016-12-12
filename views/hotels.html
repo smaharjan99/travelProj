@@ -1,37 +1,54 @@
 <div id="hotelContainer">
-    <form class="hotelForm" name="hotelBooking">
-        <div class="row">
-            <div class="col-md-2" id="hotelInput">
-                <label>Destination</label>
-                <input type="text" name="origin">
-            </div>
-        </div>
-        <div class="row" id="hotelCheck">
-            <div class="col-md-2">
-                <label>Check-In</label>
-                <br>
-                <input type="date" name="depart">
-            </div>
-            <div class="col-md-2">
-                <label>Check-Out</label>
-                <br>
-                <input type="date" name="return">
-            </div>
-            <div class="col-md-2" id="hotelGuest">
-                <label>Guests</label>
-                <br>
-                <select>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2">
-                <br>
-                <button type="search" class="btn btn-primary">Search</button>
-            </div>
-        </div>
+    <form name="outerForm" class="tab-form-demo">
+        <uib-tabset active="activeJustified" justified="true">
+            <uib-tab index="0" heading="Book a Flight">
+                <ng-form name="nestedForm">
+                    <div class="form-group">
+                        <form class="hotelForm" name="hotelBooking">
+                            <div class="row">
+                                <div class="col-md-2" id="hotelInput">
+                                    <label>Destination</label>
+                                    <input type="text" name="origin">
+                                </div>
+                            </div>
+                            <div class="row" id="hotelCheck">
+                                <div class="col-md-2">
+                                    <label>Check-In</label>
+                                    <br>
+                                    <input type="date" name="depart">
+                                </div>
+                                <div class="col-md-2">
+                                    <label>Check-Out</label>
+                                    <br>
+                                    <input type="date" name="return">
+                                </div>
+                                <div class="col-md-2" id="hotelGuest">
+                                    <label>Guests</label>
+                                    <br>
+                                    <select>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <br>
+                                    <button type="search" class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </ng-form>
+            </uib-tab>
+            <uib-tab index="2" heading="Check Hotel Status">
+                <ng-form name="nestedForm">
+                    <div class="form-group">
+                        <label>Enter Hotel Booking Number</label>
+                        <input type="text" class="form-control" required ng-model="model.name" />
+                    </div>
+                </ng-form>
+        </uib-tabset>
     </form>
 </div>

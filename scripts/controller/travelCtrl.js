@@ -15,10 +15,7 @@ angular.module("travelApp").controller("travelCtrl", ["$scope", "travelService",
             name: 'Minas Tirith',
             src: '#!/destinations'
             },
-        {
-            name: 'Isengard',
-            src: '#!/destinations'
-        },
+
         {
             name: 'Mordor',
             src: '#!/destinations'
@@ -70,7 +67,7 @@ angular.module("travelApp").controller("travelCtrl", ["$scope", "travelService",
                     'Newark Liberty International Airport',
                    'Seattle Tacoma International Airport']
 
-    $scope.alist = ['The Shire', 'Rivendell', 'Isengard', 'Mordor'];
+    $scope.alist = ['The Shire', 'Rivendell', 'Minas Tirith', 'Mordor'];
 
     $scope.flightlist = {
         depart: "",
@@ -81,6 +78,49 @@ angular.module("travelApp").controller("travelCtrl", ["$scope", "travelService",
         class: ""
     };
 
+    $scope.hotelslist = [
+        {
+            name: "WestMarch Hotel"
+
+        },
+        {
+            name: "Brandywine Lodge"
+        },
+        {
+            name: "Bombadil's Inn"
+        },
+        {
+            name: "Misty Mountains Rest"
+        },
+        {
+            name: "Elronds Suites"
+        },
+        {
+            name: "Imladris Hotel"
+        },
+        {
+            name: "Gondor Hotel & Suites"
+        },
+        {
+            name: "Anduin Luxury"
+        },
+        {
+            name: "Pelennor Fields Lodge"
+        },
+        {
+            name: "Mount Doom Inn"
+        },
+        {
+            name: "Isildur Suites"
+        },
+        {
+            name: "Sauron 6"
+        },
+
+    ]
+
+
+    $scope.isNavCollapsed = true;
 
     travelService.flightObj = $scope.flightlist;
 
@@ -104,7 +144,7 @@ angular.module("travelApp").controller("travelCtrl", ["$scope", "travelService",
         });
     }
 
-    $scope.toggled = function (open) {
+    /*  $scope.toggled = function (open) {
         $log.log('Dropdown is now: ', open);
     };
     $scope.toggleDropdown = function ($event) {
@@ -114,9 +154,9 @@ angular.module("travelApp").controller("travelCtrl", ["$scope", "travelService",
     };
 
 
-    $scope.appenToEl = angular.element(document.querySelector('#dropdown-long-content'));
+    $scope.appenToEl = angular.element(document.querySelector('#dropdown-long-content'));*/
 
-    $scope.myInterval = 5000;
+    $scope.myInterval = 3000;
     $scope.noWrapSlides = false;
     $scope.active = 0;
     var slides = $scope.slides = [];
@@ -133,7 +173,7 @@ angular.module("travelApp").controller("travelCtrl", ["$scope", "travelService",
             id: 0
     },
         {
-            image: '/images/about1.jpg',
+            image: '/images/travel1.jpg',
             text: 'asd',
             id: 1
   }]

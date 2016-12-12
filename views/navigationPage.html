@@ -1,9 +1,94 @@
 <link rel="stylesheet" type="text/css" href="/css/style.css">
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+
+
+        <a class="navbar-brand" href="#!/">TOLKIEN TRAVELS<img src="/images/JRRT_logo.svg.png" class="pull-left" style="width: 20px; height: 30px; display: inline-block;">
+</a>
+
+
+    </div>
+    <div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">
+        <ul class="nav navbar-nav">
+            <li><a href="#!/">Home</a></li>
+            <li class="dropdown">
+                <a href="#!/destinations" class="dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenu1" aria-haspopup="true" aria-expanded="false">Destinations<span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li ng-repeat="choice in destinationsList">
+                        <a href="{{choice.src}}">{{choice.name}}</a>
+                    </li>
+                </ul>
+            </li>
+
+
+            <li class="dropdown">
+                <a href="#!/reservations" class="dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenu1" aria-haspopup="true" aria-expanded="false">Reservations<span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#!/bookings">Flights</a></li>
+                    <li><a href="#!/hotels">Hotels</a></li>
+
+
+                </ul>
+            </li>
+            <li><a href="#!/about">About Us</a></li>
+            <li><a href="#!/contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!--<nav class="navbar navbar-default navbar-custom navbar-nav navbar-fixed-top">
+
+    <div class="container-fluid">
+        <div class="navbar-header navbar-default navbar-nav">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarResp" ng-click="navbarResp = !navbarResp" aria-controls="navbarResp" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </button>
+
+        </div>
+        <div class="collapse navbar-collapse" uib-collapse="navbarResp">
+
+            <ul class="nav navbar-nav">
+
+
+            </ul>
+
+
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default"></button>
+            </form>
+
+
+        </div>
+
+    </div>
+
+    <button type="submit" class="btn btn-default">Search</button>
+    </form>
+    </div>-->
+
+<!--
+
+
 <nav class="navbar navbar-default navbar-custom navbar-nav navbar-fixed-top">
 
     <div class="container-fluid">
         <div class="navbar-header navbar-default navbar-nav">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarResp" aria-controls="navbarResp" aria-expanded="false" aria-label="Toggle navigation">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarResp" ng-click="navbarResp = !navbarResp" aria-controls="navbarResp" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -11,59 +96,49 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#!/">TOLKIEN TRAVELS<img src="/images/JRRT_logo.svg.png" class="img-responsive" alt="Responsive image" style="width: 25px; height: 32px;"></a>
-            <!--</div>-->
-            <div class="collapse navbar-collapse" id="navbarResp">
+        </div>
+        <div class="collapse navbar-collapse" uib-collapse="navbarResp">
 
-                <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav">
 
-                    <li><a href="#!/">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#!/destinations" class="dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenu1" aria-haspopup="true" aria-expanded="false">Destinations<span class="caret"></span></a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li ng-repeat="choice in destinationsList">
-                                <a href="{{choice.src}}">{{choice.name}}</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="#!/reservations" class="dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenu1" aria-haspopup="true" aria-expanded="false">Reservations<span class="caret"></span></a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a href="#!/reservations">Flights</a></li>
-                            <li><a href="#!/reservations">Hotels</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#!/reservations" class="dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenu1" aria-haspopup="true" aria-expanded="false">Reservations<span class="caret"></span></a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a href="#!/bookings">Flights</a></li>
-                            <li><a href="#!/hotels">Hotels</a></li>
+                <li><a href="#!/">Home</a></li>
+                <li class="dropdown">
+                    <a href="#!/destinations" class="dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenu1" aria-haspopup="true" aria-expanded="false">Destinations<span class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li ng-repeat="choice in destinationsList">
+                            <a href="{{choice.src}}">{{choice.name}}</a>
+                        </li>
+                    </ul>
+                </li>
 
 
-                        </ul>
-                    </li>
-                    <li><a href="#!/about">About Us</a></li>
-                    <li><a href="#!/contact">Contact</a></li>
-                </ul>
+                <li class="dropdown">
+                    <a href="#!/reservations" class="dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenu1" aria-haspopup="true" aria-expanded="false">Reservations<span class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#!/bookings">Flights</a></li>
+                        <li><a href="#!/hotels">Hotels</a></li>
 
 
-                <form class="navbar-form navbar-left">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
+                    </ul>
+                </li>
+                <li><a href="#!/about">About Us</a></li>
+                <li><a href="#!/contact">Contact</a></li>
+            </ul>
 
 
-            </div>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default"></button>
+            </form>
+
 
         </div>
 
-        <button type="submit" class="btn btn-default">Search</button>
-        </form>
     </div>
 
-
-
-
-</nav>
+    <button type="submit" class="btn btn-default">Search</button>
+    </form>
+    </div>
+-->

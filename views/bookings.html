@@ -1,52 +1,70 @@
 <div id="imageContainer">
-    <form class="flightForm" name="booking">
-        <div class="row">
-            <div class="col-md-2">
-                <label>Flying From</label>
-                <input type="text" ng-model="flightlist.departingList" uib-typeahead="name for name in dlist| filter:$viewValue" class="form-control" placeholder="Select the departure">
-            </div>
-            <div class="col-md-2">
-                <label>Flying To</label>
-                <input type="text" ng-model="selected" uib-typeahead="name for name in alist | filter:$viewValue" class="form-control" placeholder="Select the destination">
-            </div>
-        </div>
-        <div class="row" id="flightDrop">
-            <div class="col-md-2">
-                <label>Departing</label>
-                <input type="date" ng-model="flightlist.departdate" name="depart">
-            </div>
-            <div class="col-md-2">
-                <label>Returning</label>
-                <input type="date" ng-model="flightlist.arrivaldate" name="return">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2">
-                <br>
-                <label>Adults</label>
-                <select ng-model="flightlist.passanger">
-                    <option>Select</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                </select>
-            </div>
-            <div class="col-md-2">
-                <br>
-                <label>Advanced Option</label>
-                <select ng-model="flightlist.class">
-                    <option>Select</option>
-                    <option>Economy</option>
-                    <option>Business</option>
-                    <option>First</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2">
-                <br>
-                <button type="submit" class="btn btn-primary" ng-click="flightForm.addList()">Search</button>
-            </div>
-        </div>
+    <form name="outerForm" class="tab-form-demo">
+        <uib-tabset active="activeJustified" justified="true">
+            <uib-tab index="0" heading="Book a Flight">
+                <ng-form name="nestedForm">
+                    <div class="form-group">
+                        <form class="flightForm" name="booking">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label>Flying From</label>
+                                    <input type="text" ng-model="flightlist.departingList" uib-typeahead="name for name in dlist| filter:$viewValue" class="form-control" placeholder="Select the departure">
+                                </div>
+                                <div class="col-md-2">
+                                    <label>Flying To</label>
+                                    <input type="text" ng-model="selected" uib-typeahead="name for name in alist | filter:$viewValue" class="form-control" placeholder="Select the destination">
+                                </div>
+                            </div>
+                            <div class="row" id="flightDrop">
+                                <div class="col-md-2">
+                                    <label>Departing</label>
+                                    <input type="date" ng-model="flightlist.departdate" name="depart">
+                                </div>
+                                <div class="col-md-2">
+                                    <label>Returning</label>
+                                    <input type="date" ng-model="flightlist.arrivaldate" name="return">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <br>
+                                    <label>Adults</label>
+                                    <select ng-model="flightlist.passanger">
+                                        <option>Select</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <br>
+                                    <label>Advanced Option</label>
+                                    <select ng-model="flightlist.class">
+                                        <option>Select</option>
+                                        <option>Economy</option>
+                                        <option>Business</option>
+                                        <option>First</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <br>
+                                    <button type="submit" class="btn btn-primary" ng-click="flightForm.addList()">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </ng-form>
+            </uib-tab>
+            <uib-tab index="2" heading="Check Flight Status">
+                <ng-form name="nestedForm">
+                    <div class="form-group">
+                        <label>Enter Flight Booking Number</label>
+                        <input type="text" class="form-control" required ng-model="model.name" />
+                    </div>
+                </ng-form>
+        </uib-tabset>
     </form>
+
 </div>

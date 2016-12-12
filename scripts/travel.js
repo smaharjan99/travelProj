@@ -19,7 +19,7 @@ appName.config(['$locationProvider', '$routeProvider', function ($locationProvid
             templateUrl: "/views/destinationsPage.html"
         })
         .when("/contact", {
-            //controller: "travelCtrl",
+            controller: "travelCtrl",
             templateUrl: "/views/contactPage.html"
         })
         .when("/bookings", {
@@ -27,9 +27,11 @@ appName.config(['$locationProvider', '$routeProvider', function ($locationProvid
             templateUrl: "/views/bookings.html"
         })
         .when("/hotels", {
+            controller: "travelCtrl",
             templateUrl: "/views/hotels.html"
         })
         .when("/contactUs", {
+            controller: "travelCtrl",
             templateUrl: "/views/contactPage.html"
         })
         .otherwise({
